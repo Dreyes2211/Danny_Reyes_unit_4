@@ -205,7 +205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8979896533561687628, guid: 3d13238a864c5374b8fdad7e81be1213, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.19
+      value: 3.75
       objectReference: {fileID: 0}
     - target: {fileID: 8979896533561687628, guid: 3d13238a864c5374b8fdad7e81be1213, type: 3}
       propertyPath: m_LocalPosition.y
@@ -213,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8979896533561687628, guid: 3d13238a864c5374b8fdad7e81be1213, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.01
+      value: 4.06
       objectReference: {fileID: 0}
     - target: {fileID: 8979896533561687628, guid: 3d13238a864c5374b8fdad7e81be1213, type: 3}
       propertyPath: m_LocalRotation.w
@@ -245,6 +245,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d13238a864c5374b8fdad7e81be1213, type: 3}
+--- !u!1 &623748241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
+  m_PrefabInstance: {fileID: 1420486997}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1113114957
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   powerUpSpeed: 10
-  powerUpInd: {fileID: 0}
+  PowerUpInd: {fileID: 623748241}
 --- !u!1 &1211016355
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +655,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_Name
-      value: powerUpInd
+      value: PowerUpInd
       objectReference: {fileID: 0}
     - target: {fileID: 1742899641471652, guid: 923deea38dc6a8843b15db7638919c1e, type: 3}
       propertyPath: m_IsActive
@@ -790,6 +795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5840633367328791408, guid: d06a57b06f6e33549a7d029c3e7bc772, type: 3}
+  PowerUpPrefab: {fileID: 8979896533561477116, guid: 3d13238a864c5374b8fdad7e81be1213, type: 3}
 --- !u!4 &2027556992
 Transform:
   m_ObjectHideFlags: 0
