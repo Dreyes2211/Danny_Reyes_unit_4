@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float powerUpSpeed = 10.0f;
     GameObject focalPoint; 
     Renderer rendererPlayer;
+    public GameObject PowerUpInd;
 
     bool hasPowerUp = false; 
     // Start is called before the first frame update
@@ -34,6 +35,8 @@ public class PlayerController : MonoBehaviour
         {
             rendererPlayer.material.color = new Color(1.0f + forwardInput, 1.0f, 1.0f + forwardInput);
         }
+
+        PowerUpInd.transform.position = transform.position;
         
     }
 
@@ -43,6 +46,8 @@ public class PlayerController : MonoBehaviour
         {
             hasPowerUp = true;
             Destroy(other.gameObject);
+            StartCoroutine(PowerUpCountDown());
+            PowerUpInd.SetActive(true);
         }
     }
 
@@ -58,4 +63,12 @@ public class PlayerController : MonoBehaviour
             rbEnemy.AddForce(awayDir * powerUpSpeed, ForceMode.Impulse);
         }
     }
+
+    IEnumerator PowerUpCountDown()
+    {
+        yield return new WaitForSeconds(8);
+        hasPowerUp = false; 
+        PowerUpInd.SetActive(false);
+    }
+
 }
